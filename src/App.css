@@ -28,3 +28,7 @@ color:white;
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.card{
+  padding: auto;
+  margin: 1rem;
+}

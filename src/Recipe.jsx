@@ -1,15 +1,18 @@
 import React from 'react';
-import styles from './recipe.module.css';
 
-let Recipe=({label, calori, image, ingredients})=>{
+let Recipe=({label, calori, image, totalTime})=>{
 return(
-    <div className={styles.recipe}>
-        <h1 className={styles.heading}>{label}</h1>
-        <ol><strong>Ingredients</strong> {ingredients.map(ingredient => (
-            <li>{ingredient}</li>
-        ))}</ol>
-        <p><strong>Calories- </strong> {calori}</p>
-        <img className={styles.image} src={image} alt='File not supported'/>
+    <div class="row">
+        <div class="col-sm-6">
+            <div className="card" style={{width: '20rem'}}>
+                <img className="card-img-top" src={image} alt={label}/>
+                <div className="card-body">
+                    <strong className="card-title">{label}</strong>
+                    <p className="card-text"><strong>Calories- </strong> {calori}</p>
+                    <p className="card-text"><strong>Total Time- </strong>{totalTime}</p>
+                </div>
+            </div>
+        </div>
     </div>
 )
 
